@@ -6,6 +6,7 @@ import { Crawler } from './pages/Crawler';
 import { Newspaper } from './pages/Newspaper';
 import { Library } from './pages/Library';
 import { MobilePromo } from './pages/MobilePromo';
+import { ExtensionPromo } from './pages/ExtensionPromo';
 import { useMockCrawlerSocket } from './services/mockWebSocket';
 
 function App() {
@@ -45,6 +46,12 @@ function App() {
         <Route path="/mobile" element={
           <Layout activeJob={job}>
             <MobilePromo />
+          </Layout>
+        } />
+
+        <Route path="/extension" element={
+          <Layout activeJob={job}>
+            <ExtensionPromo />
           </Layout>
         } />
 
