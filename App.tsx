@@ -5,6 +5,7 @@ import { Dashboard } from './pages/Dashboard';
 import { Crawler } from './pages/Crawler';
 import { Newspaper } from './pages/Newspaper';
 import { Library } from './pages/Library';
+import { MobilePromo } from './pages/MobilePromo';
 import { useMockCrawlerSocket } from './services/mockWebSocket';
 
 function App() {
@@ -41,7 +42,11 @@ function App() {
           </Layout>
         } />
 
-        {/* Removed System Logs Route - User doesn't need to see this */}
+        <Route path="/mobile" element={
+          <Layout activeJob={job}>
+            <MobilePromo />
+          </Layout>
+        } />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/newspaper" replace />} />
