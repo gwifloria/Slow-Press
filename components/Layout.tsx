@@ -7,7 +7,6 @@ import {
   Sparkles,
   Loader2,
   Monitor, 
-  Puzzle 
 } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CrawlerJob } from '../types';
@@ -140,17 +139,11 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeJob }) => {
             )}
 
             <div className="p-4 border-t border-stone-100 space-y-2">
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 gap-2">
                     <Link to="/mobile" onClick={() => setIsSidebarOpen(false)}>
-                        <div className="flex flex-col items-center justify-center gap-1 p-3 bg-stone-50 text-stone-600 rounded-xl border border-stone-100 hover:bg-stone-100 hover:text-stone-900 transition-all text-center h-full">
+                        <div className="flex items-center justify-center gap-3 p-3 bg-stone-50 text-stone-600 rounded-xl border border-stone-100 hover:bg-stone-100 hover:text-stone-900 transition-all w-full">
                             <Monitor size={18} />
-                            <div className="text-[10px] font-bold">Product</div>
-                        </div>
-                    </Link>
-                    <Link to="/extension" onClick={() => setIsSidebarOpen(false)}>
-                        <div className="flex flex-col items-center justify-center gap-1 p-3 bg-stone-50 text-stone-600 rounded-xl border border-stone-100 hover:bg-stone-100 hover:text-stone-900 transition-all text-center h-full">
-                            <Puzzle size={18} />
-                            <div className="text-[10px] font-bold">Extension</div>
+                            <div className="text-xs font-bold">Product Ecosystem</div>
                         </div>
                     </Link>
                 </div>
