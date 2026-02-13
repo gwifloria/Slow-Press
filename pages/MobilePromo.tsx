@@ -7,10 +7,8 @@ import {
   Zap, 
   Headphones, 
   ArrowRight,
-  BellRing,
   Monitor,
   MousePointer2,
-  Layers,
   Command,
   ArrowLeftRight,
   Cloud,
@@ -24,7 +22,7 @@ export const MobilePromo: React.FC = () => {
     <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 bg-[#fafaf9]">
       
       {/* ================= HERO SECTION (MOBILE FOCUS) ================= */}
-      <section className="bg-[#1c1917] text-[#fafaf9] min-h-[85vh] relative overflow-hidden flex flex-col justify-center">
+      <section className="bg-[#1c1917] text-[#fafaf9] min-h-[85vh] relative overflow-hidden flex flex-col justify-center rounded-3xl mb-12">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-stone-800/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-stone-800/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
@@ -129,7 +127,7 @@ export const MobilePromo: React.FC = () => {
       </section>
 
       {/* ================= WEB SHOWCASE SECTION ================= */}
-      <section className="py-32 bg-[#fafaf9] relative overflow-hidden">
+      <section className="py-24 bg-[#fafaf9] relative overflow-hidden">
          <div className="container max-w-7xl mx-auto px-6">
             
             <div className="text-center max-w-3xl mx-auto mb-20">
@@ -142,7 +140,7 @@ export const MobilePromo: React.FC = () => {
             </div>
 
             {/* BROWSER MOCKUP */}
-            <div className="relative rounded-xl bg-stone-900 p-2 md:p-4 shadow-2xl mx-auto border border-stone-800 max-w-6xl group">
+            <div className="relative rounded-xl bg-stone-900 p-2 md:p-4 shadow-2xl mx-auto border border-stone-800 max-w-6xl group hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-shadow duration-500">
                {/* Browser Window Chrome */}
                <div className="h-8 bg-stone-900 flex items-center px-4 gap-2 border-b border-stone-800 rounded-t-lg">
                   <div className="flex gap-2">
@@ -312,7 +310,7 @@ export const MobilePromo: React.FC = () => {
       </section>
 
       {/* ================= FOOTER CTA ================= */}
-      <section className="bg-[#1c1917] text-stone-400 py-12 text-center">
+      <section className="bg-[#1c1917] text-stone-400 py-12 text-center rounded-t-3xl mx-4">
          <div className="container mx-auto px-6">
             <h2 className="text-2xl font-serif text-white mb-6">Ready to upgrade your information diet?</h2>
             <div className="flex justify-center gap-4">

@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import { 
   Radar,       
   Briefcase,   
-  Library as LibraryIcon, 
   Newspaper,    
-  LogOut, 
   Menu,
   Sparkles,
   Loader2,
-  Coffee,
-  Smartphone,
-  Puzzle // Icon for Extension
+  Monitor, 
+  Puzzle 
 } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CrawlerJob } from '../types';
@@ -24,10 +21,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeJob }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
-  const handleLogout = () => {
-    navigate('/');
-  };
 
   const navItems = [
     { 
@@ -43,13 +36,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeJob }) => {
       icon: Briefcase, 
       path: '/feed',
       desc: 'SOP、工具与提效模版'
-    },
-    { 
-      label: '精神陈列', 
-      subLabel: 'Library',
-      icon: LibraryIcon, 
-      path: '/library',
-      desc: '书籍、影音与深度访谈'
     },
     { 
       label: '全网雷达', 
@@ -157,8 +143,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeJob }) => {
                 <div className="grid grid-cols-2 gap-2">
                     <Link to="/mobile" onClick={() => setIsSidebarOpen(false)}>
                         <div className="flex flex-col items-center justify-center gap-1 p-3 bg-stone-50 text-stone-600 rounded-xl border border-stone-100 hover:bg-stone-100 hover:text-stone-900 transition-all text-center h-full">
-                            <Smartphone size={18} />
-                            <div className="text-[10px] font-bold">App</div>
+                            <Monitor size={18} />
+                            <div className="text-[10px] font-bold">Product</div>
                         </div>
                     </Link>
                     <Link to="/extension" onClick={() => setIsSidebarOpen(false)}>
@@ -168,22 +154,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeJob }) => {
                         </div>
                     </Link>
                 </div>
-
-                <div className="flex items-center gap-3 px-4 py-3 bg-stone-50/50 rounded-xl border border-stone-100">
-                    <Coffee size={18} className="text-stone-400" />
-                    <div>
-                    <div className="text-xs font-bold text-stone-600">Daily Wisdom</div>
-                    <div className="text-[10px] text-stone-400 italic">"Focus on the signal."</div>
-                    </div>
-                </div>
-                
-                <button 
-                onClick={handleLogout}
-                className="flex items-center gap-3 px-4 py-3 w-full text-stone-500 hover:text-stone-900 hover:bg-stone-50 rounded-xl transition-colors"
-                >
-                <LogOut size={18} />
-                <span className="text-sm font-medium">退出登录</span>
-                </button>
             </div>
         </div>
       </aside>

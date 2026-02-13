@@ -4,7 +4,6 @@ import { Layout } from './components/Layout';
 import { Dashboard } from './pages/Dashboard';
 import { Crawler } from './pages/Crawler';
 import { Newspaper } from './pages/Newspaper';
-import { Library } from './pages/Library';
 import { MobilePromo } from './pages/MobilePromo';
 import { ExtensionPromo } from './pages/ExtensionPromo';
 import { useMockCrawlerSocket } from './services/mockWebSocket';
@@ -28,12 +27,6 @@ function App() {
         <Route path="/feed" element={
           <Layout activeJob={job}>
             <Dashboard />
-          </Layout>
-        } />
-
-        <Route path="/library" element={
-          <Layout activeJob={job}>
-            <Library />
           </Layout>
         } />
         
